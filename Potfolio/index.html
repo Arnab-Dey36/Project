@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arnab Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <div class="left">My Potfolio</div>
+        <div class="right">
+          <ul>
+            <li id="homeButton"><a href="#">Home</a></li>
+            <li id="aboutButton"><a href="#">About</a></li>
+            <li id="skillsButton"><a href="#">Skills</a></li>
+            <li id="projectsButton"><a href="#">Projects</a></li>
+            <li id="contactButton"><a href="#">Contact Me</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- about Section -->
+      <section class="firstSection">
+        <div class="leftSection">
+          Hi, My name is <span class="purple">Arnab</span>
+          <div>and I am a passionate</div>
+          <span id="element"></span>
+
+          <!-- Social Links -->
+          <div class="social-links">
+            <a
+              href="https://github.com/Arnab-Dey36/Arnab-Dey36"
+              target="_blank"
+            >
+              <img src="Picture/Gitub.png" alt="GitHub" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/arnab-dey-681a0228a/"
+              target="_blank"
+            >
+              <img src="Picture/Linkedin.png" alt="LinkedIn" />
+            </a>
+            <a href="mailto:adey78905@gmail.com" target="_blank">
+              <img src="Picture/gmail.png" alt="Email" />
+            </a>
+          </div>
+
+          <!-- Resume Download Button -->
+          <div class="buttonSection">
+            <a href="Resume3.pdf" target="_blank">
+              <button class="resumeButton">Download Resume</button>
+            </a>
+            <a href="mailto:adey78905@gmail.com" target="_blank">
+              <button class="contactButton">Contact Me</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="rightSection">
+          <img src="Picture/Dp.jpg" alt="" />
+        </div>
+      </section>
+
+      <!-- Main About Section -->
+      <section class="aboutSection">
+        <h2 id="about">About Me</h2>
+        <div class="aboutContent">
+          <p>
+            I’m a passionate 3rd-year Electronics and Communication Engineering
+            student and an aspiring web developer. I enjoy building responsive
+            and user-friendly websites using HTML, CSS, and JavaScript. I’m
+            constantly learning new technologies to improve my skills and bring
+            creative ideas to life through code. My goal is to become a
+            full-stack developer and contribute to real-world projects that make
+            an impact.
+          </p>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section class="skillsSection">
+        <h2 id="skills">Skills</h2>
+        <ul>
+          <li class="skillItem"><img src="Picture/HTML1.png" alt="" />HTML</li>
+          <li class="skillItem"><img src="Picture/Css1.png" alt="" />CSS</li>
+          <li class="skillItem"><img src="Picture/Js1.png" alt="" />JavaScript</li>
+          <li class="skillItem"><img src="Picture/React1.png" alt="" />React</li>
+        </ul>
+      </section>
+
+      <!-- Projects Section -->
+      <section class="projectsSection">
+        <h2 id="projects" class="title">Projects</h2>
+        <div class="project-container">
+          <div class="project-box">
+            <img src="Picture/Weather.png" alt="" />
+            <div class="project-content">
+              <h3>Weather App</h3>
+              <p>Real-time weather updates using OpenWeatherMap API.</p>
+              <a href="https://github.com/Arnab-Dey36/Portfolio-Website/tree/main/Weather%20App" target="_blank"
+                >View Project</a
+              >
+            </div>
+          </div>
+
+          <div class="project-box">
+            <img src="Picture/Calcu.png" alt="" />
+            <div class="project-content">
+              <h3>Calculator</h3>
+              <p>
+                A simple calculator application built with HTML, CSS, and
+                JavaScript.
+              </p>
+              <a href="https://github.com/Arnab-Dey36/Portfolio-Website/tree/main/Calculator" target="_blank">View Project</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="contactSection">
+        <h2 id="contact">Contact Me</h2>
+        <form  id="contactForm">
+          <input id="name" type="text" name="name" placeholder="Enter Your Name"  />
+          <input id="email" type="email" name="email" placeholder="Enter Your Email"  />
+          <button id="submitButton" type="submit">Send Message</button>
+        </form>
+      </section>
+    </main>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+      var typed = new Typed("#element", {
+        strings: ["Web Developer", "Student", "Electronics Engineer"],
+        typeSpeed: 50,
+      });
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
