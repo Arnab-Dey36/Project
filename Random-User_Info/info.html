@@ -1,0 +1,45 @@
+
+
+
+/*Fetch a random user's data using the XMLHttpRequest method from the https://randomuser.me/api/ API 
+and dynamically display the user's full name and photo on the webpage.*/
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Random User Info</h2>
+    <div id="userCard">
+        <img id="userPhoto" src="" alt="User Photo" width="250" />
+        <p id="userName"></p>
+    </div>
+</body>
+<script>
+    const requestURL = 'https://randomuser.me/api/';
+
+    const xhr = new XMLHttpRequest(); // Create request object
+    xhr.open('GET', requestURL);      // Set method and URL
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            const data = JSON.parse(this.responseText);
+
+            // Access name and picture
+            const user = data.results[0];
+            const fullName = `${user.name.title} ${user.name.first} ${user.name.last}`;
+            const photoURL = user.picture.large;
+
+            // Set in HTML
+            document.getElementById('userName').textContent = fullName;
+            document.getElementById('userPhoto').src = photoURL;
+        }
+    };
+
+    xhr.send(); // Send request
+</script>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    
+    //Lexical Scope-->
+
+    function outer(){
+        let Username = 'Ram'
+
+        function inner(){   //Here inner function apna outer function ka varible ko access kar sakta hai
+            console.log(`Inner : ${Username}`)
+        } 
+
+        inner() // Inner function ko call kiya
+    }
+    outer() //inner function ko call hone ke liya outer function ko bhi call karna padega
+
+    /*NOTE:- Ek Inner function ke andar declare hua koi variable ko dusre inner function usko use nahi 
+    kar sakta hai khali outer function main declear hua vairble koi access kar sakta hai...
+    */
+</script>
+<script>
+
+    // CLOSURE--->closure main jab pura ka pura function hi return kar dete ho tab srif function return 
+    // nahi hota uska pura scope return hota hai srif scope nahi vo Lexical Scope return hota
+
+    function makeFun(){
+        const name = "Mozilla";
+        function displayName(){
+            console.log(name);
+        }
+
+        return displayName;
+    }
+    const myFun = makeFun()
+    myFun();
+
+</script>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Learning JavaScript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    
+
+    //setInterval()--->runs a function repeatedly at fixed intervals/time..
+    setInterval( () =>{
+        console.log("Ram",Date.now())
+    },2000)
+
+    //functio ko ek variable ke andar store karke uska refrence se setTimeout ko kaise use karte hai
+    const SayDate = () =>{
+        console.log("Ram",Date.now());
+    }
+    // setInterval(SayDate,1000);   //---> isiko next line mein ek variable ke andar store kiya hu...
+    const Stopme = setInterval(SayDate,1000);
+    
+    //clearInterval()--->setInterval ko stop karne ke liya use hota hai
+    clearInterval(Stopme);
+
+
+
+
+    /*use Start and Stop buttons to control a setInterval() in JavaScript.
+    ✅🎯 Goal:
+    When you click Start, a function runs every second (e.g., counter or message).
+
+    When you click Stop, the interval stops.*/
+
+
+   let stopped;
+   //Start Button
+    document.querySelector('#start').addEventListener('click',()=>{
+        if(!stopped){
+            const TextChange = ()=>{
+                console.log("Javascript",Date.now());
+            };
+            stopped= setInterval(TextChange,1000);
+        }
+    });
+
+    //Stop Button
+    document.querySelector('#stop').addEventListener('click',()=>{
+        clearInterval(stopped);
+        console.log("STOPPED!!");
+        stopped=null;
+    })
+    
+</script>
+</html>

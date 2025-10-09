@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+<body>
+    <h2>Amazing image</h2>
+    <div>
+        <ul id="image">
+            <li><img width="200px" id="dog" src="https://cdn.pixabay.com/photo/2016/01/05/17/51/maltese-1123016_1280.jpg" alt=""></li>
+            <li><img width="200px" id="cat" src="https://cdn.pixabay.com/photo/2016/02/10/16/37/cat-1192026_1280.jpg" alt=""></li>
+            <li><img width="200px" id="bird" src="https://cdn.pixabay.com/photo/2024/03/16/10/02/spring-8636733_1280.jpg" alt=""></li>
+            <li><img width="200px" id="flower" src="https://cdn.pixabay.com/photo/2014/04/10/11/24/rose-320868_1280.jpg" alt=""></li>
+            <li><a id="google" href="https://www.google.com/">Google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    // // EVENT HANDELING METHOD ---> 1) Basic DOM Property Handlers
+    // document.getElementById('cat').onclick = function(){
+    //     alert('Cat clicked')
+    // }
+
+    // //2)addEventListener() ---->Best Optimized preferred metod
+    // document.getElementById('cat').addEventListener("click", () => {
+    //     alert('Cat clicked Again')
+    // });
+
+
+    // //Basic synatax Of EVENT OBJECT-->
+    // document.getElementById('cat').addEventListener('click', function(e){
+    //     console.log(e);
+    // });K
+
+    // //With Arrow function
+    // document.getElementById('cat').addEventListener("click", (e) => {
+    //     console.log(e)
+    // });
+
+    //Event Propagation
+    // document.getElementById("image").addEventListener('click',(e) => {
+    //     console.log("clicked inside the ul"); //-->root
+    // },true);  // This is a Capturing Phase-->root to target
+
+    // document.getElementById('cat').addEventListener('click', (e) => {
+    //     console.log(("Cat Clicked"));   //-->target
+    //     e.stopPropagation() //-->event boubble hoke upar(root) pe nahi jayaga
+    // },true); 
+
+    // PreventDefault Method
+    document.getElementById("google").addEventListener('click',(e) =>{
+        e.preventDefault();
+        console.log("google clicked");
+    },false);
+    
+</script>
+</html>

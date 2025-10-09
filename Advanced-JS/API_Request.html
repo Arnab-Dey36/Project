@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Request</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const requestURL = 'https://randomuser.me/api/'
+
+    const xhr = new XMLHttpRequest()    //create an object
+    xhr.open('GET',requestURL);   //Set request type and URL
+
+    //continuously track karne ke liya
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState)   //-->to check ,readystate status value  change ho raha hai ki nahi
+
+        //state ko detect karna hai to
+        if(xhr.readyState === 4){
+            const data = JSON.parse(this.responseText);
+            console.log(data.results[0].name);
+        }
+    }       
+    xhr.send()  //Sends the request to the server(open apna apni call nahi hota ,Send()-->open ko call karta hai)
+
+    
+    
+</script>
+</html>
