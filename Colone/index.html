@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coder Army | Learn Build Conquer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="navbar">
+    <div class="logo">
+      <div class="logo-container-nav">
+        <div class="logo-letter">S</div>
+        <div class="logo-letter">t</div>
+        <div class="logo-letter">r</div>
+        <div class="logo-letter">i</div>
+        <div class="logo-letter">c</div>
+        <div class="logo-letter">k</div>
+        <div class="logo-icon"><i class="fas fa-code"></i></div>
+      </div>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li class="close-mobile-menu"><i class="fas fa-times"></i></li>
+        <li><a href="#top" class="active-nav">Home</a></li>
+        <li><a href="#courses">Tutorials</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="#hackathon">Hackathon</a></li>
+      </ul>
+    </nav>
+    <button class="login-btn"><i class="fas fa-sign-in-alt"></i> Login</button>
+    <button class="mobile-toggle">
+      <i class="fas fa-bars"></i>
+    </button>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="top" class="hero">
+    <div class="hero-text">
+      <h1>Be a part of our <span>Future!</span></h1>
+      <p>
+        A community of coders, making the world a better place. Learn, build, and grow with the best developers in the
+        industry.
+      </p>
+      <div class="social-links">
+        <a href="https://www.youtube.com/@CoderArmy9"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.instagram.com/coder_army9/"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/coderarmy/posts/?feedView=all"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+      <div class="buttons">
+        <button class="btn primary">Start Paid Learning</button>
+        <button class="btn secondary"><a href="https://www.youtube.com/@Rohit_Negi"><i class="fab fa-youtube"></i> Watch Demo</a></button>
+      </div>
+      <div class="stats">
+        <div>
+          <h3>202K+</h3>
+          <p>Students</p>
+        </div>
+        <div>
+          <h3>4+</h3>
+          <p>Courses</p>
+        </div>
+        <div>
+          <h3>2+</h3>
+          <p>Instructors</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <div class="code-card">
+        <div class="code-card-header">CoderArmy.cpp</div>
+        <pre>
+<span class="purple">#include</span> &lt;thread&gt;
+<span class="purple">#include</span> &lt;chrono&gt;
+
+<span class="blue">using namespace</span> std;
+
+<span class="blue">class</span> CoderArmy {
+  <span class="blue">private</span>:
+  vector&lt;string&gt; members;
+  unique_ptr&lt;int&gt; projectCount;
+  bool isActive;
+  const string motto = <span class="green">"Build. Deploy. Conquer."</span>;
+};
+    </pre>
+      </div>
+    </div>
+  </section>
+  <section id="courses" class="courses">
+
+    <!-- Premium Courses Section -->
+    <h2>Our&nbsp;<span class="purple">Premium Courses</span></h2>
+    <p>Discover our comprehensive learning programs designed by industry experts to advance your career and technical
+      skills.</p>
+    <div class="course-container-cards">
+      <div class="course-card">
+        <img src="https://coderarmy.in/assets/images/webdev.png" alt="Web Development Course">
+        <div class="span">
+        <span class="purple">Beginner to Advanced</span>
+        <span>120 lectures</span>
+        </div>
+        <h3>Web Development + Blockchain + System Design + DSA</h3>
+        <p>by Rohit Negi & Aditya Tandon</p>
+        <p>Complete LIVE course covering Web Dev, Blockchain, System Design, DSA with industry-grade projects.</p>
+        <button class="btn primary">Enroll Now</button>
+      </div>
+      <div class="course-card">
+        <img src="https://coderarmy.in/assets/images/HLD.png" alt="HLD Full Course">
+        <div class="span">
+        <span class="purple">Beginner to Advanced</span>
+        <span>20 lectures</span>
+        </div>
+        <h3>High Level Design (HLD) Masterclass</h3>
+        <p>by Aditya Tandon</p>
+        <p>Deep dive into scalable systems architecture, real-world feature design, and comprehensive end-to-end HLD problem solving.</p>
+        <button class="btn primary">Enroll Now</button>
+      </div>
+      <div class="course-card">
+        <img src="https://coderarmy.in/assets/images/dsaPaid.png" alt="DSA Full Course">
+        <div class="span">
+        <span class="purple">Beginner to Advanced</span>
+        <span>200 lectures</span>
+        </div>
+        <h3>Data Structures & Algorithms (DSA)</h3>
+        <p>by Rohit Negi</p>
+        <p>Master DSA concepts and advanced problem solving techniques to crack FAANG interviews with confidence.</p>
+        <button class="btn primary">Enroll Now</button>
+      </div>
+    </div>
+    <!-- Free Courses Section -->
+    <div class="free-course">
+      <h3>Ready to Start Your Learning Journey?</h3>
+      <p>Join thousands of students who have transformed their careers with our expert-designed courses.</p>
+      <button>Explore All Courses</button>
+    </div>
+    <div class="text">
+      <h2>What Will You&nbsp;<span class="purple">Get?</span></h2>
+      <p>Explore our comprehensive free courses designed to help you master the skills needed for your dream job</p>
+    </div>
+
+    <!-- Free Courses card Section -->
+    <div class="free-course-container">
+      <div class="free-course-card">
+        <img src="https://res.cloudinary.com/devil0wagh/image/upload/v1758738293/web_hooznk.png" alt="Free Web Development Course">
+        <div class="span">
+        <span class="purple">Beginner</span>
+        <span>23 lectures</span>
+        </div>
+        <h3>Web Development Full Course</h3>
+        <p>by Rohit Negi</p>
+        <p>Build Anything: The All-in-One Web Development Bootcamp.</p>
+        
+        <button class="btn primary">Start Learning</button>
+      </div>
+      <div class="free-course-card">
+        <img src="https://res.cloudinary.com/devil0wagh/image/upload/v1758738293/genai_isnfd6.png" alt="Free Generative AI Course">
+        <div class="span">
+          <span class="purple">Intermediate</span>
+          <span>8 lectures</span>
+        </div>
+        <h3>GenAI Course</h3>
+        <p>by Rohit Negi</p>
+        <p>Unlocking the Secrets of Generative AI: From Concepts to Code.</p>
+        <button class="btn primary">Start Learning</button>
+      </div>
+      <div class="free-course-card">
+        <img src="https://res.cloudinary.com/devil0wagh/image/upload/v1758738292/lld_ab1qch.png" alt="Free System Design Course">
+        <div class="span">
+          <span class="purple">Beginner</span>
+          <span>40 lectures</span>
+        </div>
+        <h3>System Design Course</h3>
+        <p>by Aditya Tandon</p>
+        <p>Learn Low-Level Design and System Design concepts from scratch to advanced.</p>
+        <button class="btn primary">Start Learning</button>
+      </div>
+      <div class="free-course-card">
+        <img src="https://res.cloudinary.com/devil0wagh/image/upload/v1758738291/cpp_e4dmot.png" alt="Free C++ Course">
+        <div class="span">
+          <span class="purple">Beginner</span>
+          <span>163 lectures</span>
+        </div>
+        <h3>DSA Course in C++</h3>
+        <p>by Rohit Negi</p>
+        <p>The Ultimate Guide to Mastering Data Structures & Algorithms in C++.</p>
+        <button class="btn primary">Start Learning</button>
+      </div>
+    </div>
+    <div class="btn-course">
+      <button class="btn secondary">
+      <span>View All Courses</span>
+      <span>&#8594;</span>
+      </button>
+    </div>   
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2>Meet Your &nbsp;<span class="purple">Instructor</span></h2>
+      <p>Learn from industry experts with real-world experience and proven track records</p>
+      <div class="instructor-profile">
+        <img src="https://coderarmy.in/assets/images/rohit_negi.png" alt="Rohit Negi">
+        <div class="instructor-info">
+          <h3>Rohit Negi</h3>
+          <p>Founder & Lead Instructor</p>
+          <p>Ex-@Uber</p>
+          
+          <div class="instructor-bio">
+            <span>IIT Graduate</span>
+            <span>2 Cr+ Package</span>
+            <span>Industry Expert</span>
+            <p>Heartfelt Problem Solver, Instructor, and Visionary Leader. Got Highest Placement in India of 2 Cr +. Post Graduate from IIT G, GATE-CSE'20 AIR - 202</p>
+          </div>
+          
+          <div class="social-links">
+            <a href="https://x.com/rohit_negi9"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/rohit_negi9/"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/rohit-negi9/"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          
+          <div class="buttons">
+            <button>Start Learning</button>
+            <button>Know More</button>
+          </div>
+        </div>
+      </div>
+      <div class="instructor-profile">
+        <img src="https://coderarmy.in/assets/images/aditya_tandon.png" alt="Aditya Tandon">
+        <div class="instructor-info">
+          <h3>Aditya Tandon</h3>
+          <p>Co-Founder & Senior Instructor</p>
+          <p>Ex-Ola | Currently @Oxyzo</p>
+          
+          <div class="instructor-bio">
+            <span>IIT Guwahati</span>
+            <span>Ex-Ola</span>
+            <span>Scalable Systems & Algorithms Expert</span>
+            
+            <p>Senior Software Engineer passionate about scalable systems and elegant algorithms. Dedicated mentor committed to teaching, learning, and inspiring future developers.</p>
+          </div>
+          
+          <div class="social-links">
+            <a href="https://x.com/adityatandon02"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/adityatandon2/"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/adityatandon2/"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <div class="buttons">
+            <button>Start Learning</button>
+            <button>Know More</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-content">
+        <div class="about-text">
+          <h2>Unlock Your Career Potential with &nbsp;<span class="purple">Our Expert Guidance</span></h2>
+          <p>We help you get industry-ready with resources and guidance tailored to your career goals.</p>
+          <ul>
+            <li><i class="fas fa-check"></i> Personalized Mentorship to Guide Your Career Path</li>
+            <li><i class="fas fa-check"></i> Career Resources & Industry Insights</li>
+            <li><i class="fas fa-check"></i> Hands-On Learning and Skill Enhancement</li>
+            <li><i class="fas fa-check"></i> Connect with a Strong Global Alumni Network</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- logo -->
+    <div class="logo-container">
+      <div class="flag-wave-container">
+        <img id="logo" src="./Picture/CoderArmyLOGO.png" alt="Logo">
+        <div class="flag-overlay"></div>
+      </div>
+    </div>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Get In <span class="purple">Touch</span></h2>
+      <p>Have questions about our courses? Want to discuss your learning journey? We're here to help you succeed.</p>
+
+      <div class="contact-content">
+        <div class="contact-form">
+          <form>
+            <div class="form-group">
+              <label>Full Name *</label>
+              <div class="input-with-icon">
+                <i class="fas fa-user"></i>
+                <input type="text" placeholder="Enter your full name" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Email Address *</label>
+              <div class="input-with-icon">
+                <i class="fas fa-envelope"></i>
+                <input type="email" placeholder="Enter your email" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Phone Number *</label>
+                <div class="input-with-icon">
+                  <i class="fas fa-phone-alt"></i>
+                  <input type="tel" placeholder="Enter your phone number" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Subject *</label>
+                <div class="input-with-icon">
+                  <input type="text" placeholder="What's this about?">
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Message *</label>
+              <div class="input-with-icon message-area">
+                <i class="fas fa-comment-alt"></i>
+                <textarea placeholder="Tell us more about your inquiry..." rows="5" required></textarea>
+              </div>
+            </div>
+            <div class="send-btn">
+              <button type="submit" class="btn primary">Send Message <i class="fas fa-paper-plane"></i></button>
+            </div>
+          </form>
+        </div>
+        <div class="contact-image">
+          <div class="online-status">
+            <span class="online-dot"></span>
+            Online
+          </div>
+          <img src="https://coderarmy.in/assets/images/webp/contactmewebp.jpg" alt="Contact Image">
+          <div class="quick-response">
+            <i class="fas fa-check-circle"></i>
+            Quick Response
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-section">
+    <div class="footer-gradient-line"></div>
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3 class="footer-title">CoderArmy</h3>
+        <p class="footer-description">
+          A community of coders, making the world a better place through technology and education.
+        </p>
+        <div class="footer-social-links">
+          <a href="https://www.linkedin.com/company/coderarmy/posts/?feedView=all"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.youtube.com/@CoderArmy9"><i class="fab fa-youtube"></i></a>
+          <a href="https://www.instagram.com/coder_army9/"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-column">
+        <h3 class="footer-title">Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="#top">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#courses">Tutorials</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h3 class="footer-title">Company</h3>
+        <ul class="footer-links">
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h3 class="footer-title">Stay Connected</h3>
+        <p class="footer-description">
+          Don't let your dreams stay dreams. Build your skills with us and turn them into reality.
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Copyright © 2025 by CoderArmy | All Rights Reserved.</p>
+    </div>
+  </footer>
+</body>
+
+</html>
