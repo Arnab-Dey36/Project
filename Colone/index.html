@@ -3,7 +3,9 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content="#0a0a14">
   <title>Coder Army | Learn Build Conquer</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="style.css" />
@@ -23,9 +25,15 @@
         <div class="logo-icon"><i class="fas fa-code"></i></div>
       </div>
     </div>
+    
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="menu-overlay"></label>
+    
     <nav>
       <ul class="nav-links">
-        <li class="close-mobile-menu"><i class="fas fa-times"></i></li>
+        <li class="close-mobile-menu">
+          <label for="menu-toggle"><i class="fas fa-times"></i></label>
+        </li>
         <li><a href="#top" class="active-nav">Home</a></li>
         <li><a href="#courses">Tutorials</a></li>
         <li><a href="#about">About Us</a></li>
@@ -33,10 +41,12 @@
         <li><a href="#hackathon">Hackathon</a></li>
       </ul>
     </nav>
+    
     <button class="login-btn"><i class="fas fa-sign-in-alt"></i> Login</button>
-    <button class="mobile-toggle">
+    
+    <label for="menu-toggle" class="mobile-toggle">
       <i class="fas fa-bars"></i>
-    </button>
+    </label>
   </header>
 
   <!-- Hero Section -->

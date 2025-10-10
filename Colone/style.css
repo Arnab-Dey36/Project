@@ -368,6 +368,18 @@ section > p {
   font-size: 1.5rem;
   cursor: pointer;
   z-index: 1000;
+  padding: 8px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.mobile-toggle:hover {
+  background-color: rgba(147, 51, 234, 0.1);
+  transform: scale(1.1);
+}
+
+.menu-toggle {
+  display: none; /* Hide the checkbox */
 }
 
 .close-mobile-menu {
@@ -378,10 +390,28 @@ section > p {
   font-size: 1.5rem;
   color: #fff;
   cursor: pointer;
+  z-index: 1001;
+}
+
+.close-mobile-menu label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(147, 51, 234, 0.2);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .close-mobile-menu:hover {
   color: #a855f7;
+}
+
+.close-mobile-menu:hover label {
+  background-color: rgba(147, 51, 234, 0.3);
+  transform: scale(1.1);
 }
 
 /* Hero Section */
@@ -1345,31 +1375,40 @@ pre {
   
   .mobile-toggle {
     display: block;
+    cursor: pointer;
+    z-index: 1002; /* Higher than close button to prevent overlap */
+    position: relative;
   }
   
   .close-mobile-menu {
     display: block;
+    cursor: pointer;
+    z-index: 1001;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(26, 26, 47, 0.9);
+    border-radius: 50%;
+    padding: 5px;
   }
   
-  .nav-links {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    height: 100vh;
-    width: 70%;
-    max-width: 300px;
-    background: #0a0a14;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-    transition: right 0.3s ease;
-    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-    z-index: 99;
-    gap: 2rem;
-  }
-  
-  .nav-links a.active-nav {
+.nav-links {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  height: 100vh;
+  width: 70%;
+  max-width: 300px;
+  background: #0a0a14;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem 2rem;
+  transition: right 0.3s ease;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  gap: 2rem;
+}  .nav-links a.active-nav {
     display: inline-block;
     width: fit-content;
     animation: pulse 1.5s infinite alternate;
@@ -1380,8 +1419,31 @@ pre {
     transform: translateX(5px);
   }
   
-  .nav-links.active {
-    right: 0;
+  /* CSS-only mobile menu toggle using checkbox */
+#menu-toggle:checked ~ nav .nav-links {
+  right: 0; /* Show menu when checkbox is checked */
+}
+
+/* Hide mobile toggle when menu is open */
+#menu-toggle:checked ~ .mobile-toggle {
+  visibility: hidden;
+}
+
+/* Overlay for mobile menu */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 98;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}  #menu-toggle:checked ~ .menu-overlay {
+    opacity: 1;
+    pointer-events: auto;
   }
   
   .hero {
